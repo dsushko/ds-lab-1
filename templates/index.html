@@ -1,0 +1,55 @@
+<html>
+    <title>
+        ДС лаб 1
+    </title>
+    <head>
+        <link rel="stylesheet" href="{{url_for('static', filename='/styles.css')}}">
+    </head>
+    <body>
+        <div class="main-block">
+            <div>
+                <form id='calc-args' action="/get-result" method="POST">
+                    <input name="num1" type="text" value="0" class="inp">
+                    <select name='op1'>
+                        <option value="+">+</option>
+                        <option value="-">-</option>
+                        <option value="*">*</option>
+                        <option value="/">/</option>
+                    </select>
+                    <span class="parenthesis">(</span>
+                    <input name="num2" type="text" value="0" class="inp">
+                    <select name="op2";>
+                        <option value="+">+</option>
+                        <option value="-">-</option>
+                        <option value="*">*</option>
+                        <option value="/">/</option>
+                    </select>
+                    <input name="num3" type="text" value="0" class="inp">
+                    <span class="parenthesis">)</span>
+                    <select name="op3">
+                        <option value="+">+</option>
+                        <option value="-">-</option>
+                        <option value="*">*</option>
+                        <option value="/">/</option>
+                    </select>
+                    <input name="num4" type="text" value="0" class="inp">
+                    <button class="submit-button">=</button>
+                    <br>
+                    <span>Округление:</span>
+                    <select name="round-type">
+                        <option value="math">Математическое</option>
+                        <option value="gauss">Бухгалтерское</option>
+                        <option value="cutoff">Усечение</option>
+                    </select>
+                </form>
+            </div>
+            <div>
+                {{res}}
+            </div>
+            <div>
+                {{round_res}}
+            </div>
+        </div>
+        Сушко Дмитрий Петрович 4 группа 4 курс
+    </body>
+</html>
