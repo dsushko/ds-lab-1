@@ -4,6 +4,7 @@ import re
 import numpy as np
 
 from flask import Flask, render_template, request, url_for, request, redirect, abort
+
 from mpmath import mp
 
 mp.prec = 250
